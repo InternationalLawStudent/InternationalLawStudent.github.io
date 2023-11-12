@@ -1,64 +1,86 @@
 /* styles.css */
 
-body {
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #FBD499;
-}
-
-header {
+.sidebar {
+    background-color: orange;
     width: 20%;
-    padding: 1em;
-    background-color: 	#f6c25d;
-    color: #879c7d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.sidebar h1 {
+    color: black;
 }
 
-nav li {
-    margin-bottom: 10px;
+.portfolio {
+    background-color: wheat;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 0;
+    bottom: 0;
+    
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
 }
 
-.content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 1em;
+input[type=checkbox] {
+   display: none;
 }
 
-a {
-    color: #a52b36;
+input:checked ~ .portfolio { 
+    left: 0;
 }
 
-p {
-    color: white;
-    size: 11px;
-    text-align: left;
+input:checked ~ label {
+    left: 0;
 }
 
-h3 {
-    color: #879c7d;
-    size: 16px;
-    padding-bottom: 10px;
-    text-align: left;
-}
-
-h2 {
-    color: #879c7d;
-    size: 20px;
-    padding-top: 10px;
-    text-align: left;
+label {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    background-color: grey;
+    padding: 10px;
+    font-size: 11px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
 }
 
 h1 {
-    color: #879c7d;
-    size: 24px;
-    padding: 10px;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
     text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: left;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: left;
+    padding: 10px;
+}
+
+p {
+    padding-left: 10px;
+    font-size: 11px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: left;
 }
 
